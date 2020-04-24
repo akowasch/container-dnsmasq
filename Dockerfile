@@ -12,4 +12,4 @@ VOLUME /etc/dnsmasq
 
 EXPOSE ${DNSMASQ_DNS_PORT}/tcp ${DNSMASQ_DNS_PORT}/udp ${DNSMASQ_DHCP_PORT}/udp
 
-ENTRYPOINT ["dnsmasq", "-k"]
+ENTRYPOINT ["dnsmasq", "-k", "-u", "dnsmasq", "-g", "dnsmasq"]
